@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>La Fontana trattoria</title>
+    <!-- para que sea responsivo dispositivo móvil-->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat,Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="styles.css" rel="stylesheet">    
+
+<body>
+    <!--HEADER -->
+    <header class="main-header">
+        <div class="container container--flex">
+            <div class="logo-container column column--50">
+                <h1 class="logo">La Fontana trattoria</h1>
+            </div>
+            <div class="main-header__contactInfo column column--50">
+                <p class="main-header-header__contactInfo__phone">
+                    <!-- icono que falta !!! -->
+                    <span class="icon-phone">+56 9 34958204</span>
+                </p>
+                <p class="main-header__contactInfo__address">
+
+                    <span class="icon-location"> 15 Norte -Viña del Mar </span>
+
+
+                </p>
+            </div>
+        </div>
+    </header>
+    <!-- NAVq -->
+    <nav class="main-nav">
+        <div class="container container--flex">
+            <!-- id="btnmenu" servirá para javaScript y darle animación -->
+            <span class="icon-menu" id="btnmenu"></span>
+            <!-- ul que tendrá un menu con id menu 
+            el cual tendra 4 li 
+             y estos li tendrán un link 
+            ul.menu#menu>li.menu__item*4>a.menu__link-->
+
+            <ul class="menu" id="menu">
+                <li class="menu__item"><a href="index.html" class="menu__link" menu__link--select>Inicio</a></li>
+                <li class="menu__item"><a href="#nosotros" class="menu__link">Nosotros</a></li>
+                <li class="menu__item"><a href="galeria.html" class="menu__link">Galeria</a></li>
+                <li class="menu__item"><a href="#contactar" class="menu__link">Contacto</a></li>
+            </ul>
+            <!-- agregar Redes Sociales .social-icon>a.social-icon__link*3>span.icon-->
+            <div class="social-icon">
+                <a href="https://www.facebook.com/" class="social-icon__link"><span class="icon-facebook"></span></a>
+                <a href="https://twitter.com/?lang=es" class="social-icon__link"><span class="icon-twitter"></span></a>
+                <a href="https://outlook.live.com/owa/" class="social-icon__link"><span class="icon-mail"></span></a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--BANNER 
+        se hará una clase banner adentro del section -->
+    <section class="banner">
+        <img src="imagenes/eventos/eventos1.jpg " alt="" class="banner__img">
+        <div class="banner__content"> La mejor y exquisita comida está aqui</div>
+    </section>
+
+
+    
+    <!--MAIN 
+        etiqueta main con la clase main -->
+    <main class="main">
+        <section class="group group--color">
+            <div class="container">
+                <a id="nosotros"></a>
+                <h2 class="main__title">Bienvenidos a la trattoria la Fontana</h2>
+                <p class="main__txt">
+                    Estimado cliente,
+
+                    es un placer darle la bienvenida a nuestra familia de restaurante.<br>
+                    Nuestra empresa empezó trabajando
+                    con un solo horario en la mañana de 8:00 am hasta
+                    las 4:00 pm, pero viendo que la empresa iba creciendo en cuanto a la preferencia de los clientes se
+                    vio en la necesidad de ampliar el horario trabajando en dos turnos, la cual ayudó a cubrir
+                    satisfactoriamente dichas necesidades con las que se encontraba en esos momentos la empresa.
+                    Nuestro local comenzó siendo un cuarto pequeño donde solo contábamos con unas cuantas mesas, pero
+                    como se menciono anteriormente tuvimos una buena aceptación por parte de los viñamarinos y sobre
+                    todo por los turistas, también se vio en la necesidad de ampliar el local ya que con el que
+                    contábamos ya no era suficiente.
+                    Con el tiempo, el duro trabajo de nuestros empleados para ofrecer la mejor calidad en nuestros
+                    platillos y servicios, y sobre todo la preferencia de los comensales las parrillas se pudieron
+                    colocar dentro de uno de los mejores restaurantes que hay en la V region de la misma especialidad.
+                    <br>
+                    En el area de galería podrán ver todas nuestras comidas.
+                </p>
+            </div>
+        </section>
+
+        <section class="group main__about__description">
+            <div class="container container--flex">
+                <div class="column column--50">
+                    <img src="imagenes/chatarra/chatarra.jpg" alt="">
+                </div>
+                <div class="column column--50">
+                    <h3 class="column__title">El mejor plato del mes!!</h3>
+                    <p class="column__txt"> Todos nuestro platos estan calificados de la mejor forma,pero este mes ganó
+                        el area chatarra!!
+                        No te vayas sin probar nuestras maravillosas hamburguesas caseras,echas por nuestra empresa de
+                        fabrica que tenemos al norte de chile,podrás disfrutar de nuestros mejores ingredientes frescos
+                        y saludables.
+
+                    </p>
+                    <a name="contactar"></a>
+                    <div class="contenedor">
+                        <article>
+                            <button id="btn-abrir-popup" class="btn-abrir-popup">Contactar</button>
+                        </article>
+
+                    </div>
+                    <div class="overlay" id="overlay">
+                        <div class="popup" id="popup">
+                            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                            <h3>Contactanos</h3>
+                            <h4>y recibe un cupon de descuento.</h4>
+                            <form action="">
+                                <div class="contenedor-inputs">
+                                    <input type="text" placeholder="Nombre">
+                                    <input type="number" placeholder="Numero de Telefono">
+                                    <input type="email" placeholder="Correo">
+                                    <input type="date"  placeholder="Reserve su mesa">
+                                    <input type="text" placeholder="Deje su mensaje...">
+                                </div>
+                                <input type="submit" class="btn-submit" value="Enviar">
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="group today-special">
+            <h2 class="group__title">Especiales de hoy</h2>
+            <div class="container container--flex">
+                <div class="column column--50-25">
+                    <img src="imagenes/risotto/risotoo9.png" alt="" class="today-special__img">
+                    <div class="today-special__title">Risotto e verdure</div>
+                    <div class="today-special__price"> 10.990$</div>
+                </div>
+                <div class="column column--50-25">
+                    <img src="imagenes/fideos/fideos2.jpg" alt="" class="today-special__img">
+                    <div class="today-special__title">Pasta Broccolosa</div>
+                    <div class="today-special__price"> 8.990$</div>
+                </div>
+                <div class="column column--50-25">
+                    <img src="imagenes/pizza/pizza.jpg" alt="" class="today-special__img">
+                    <div class="today-special__title">Pizza Margerita</div>
+                    <div class="today-special__price"> 12.990$</div>
+                </div>
+                <div class="column column--50-25">
+                    <img src="imagenes/vegetal/vegetal4.jpg" alt="" class="today-special__img">
+                    <div class="today-special__title">Alto lá le Calorie</div>
+                    <div class="today-special__price"> 9.990$</div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <section class="caja">
+            <div class="contenedor">
+                <div class="caja__columna">
+                    <svg>
+                        <rect></rect>
+                    </svg>
+                    <div class="texto_mapa">
+                        <h2>Donde Estamos?</h2>
+                        <iframe class="mapa_posicion"
+                            src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.8289325189608!2d-71.54861748563349!3d-33.00828528233945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689ddc24886fef5%3A0x35d1dfbc69ebd508!2s15%20Nte.%2C%20Vi%C3%B1a%20del%20Mar%2C%20Regi%C3%B3n%20de%20Valpara%C3%ADso!5e0!3m2!1ses!2scl!4v1567963839572!5m2!1ses!2scl"
+                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container container--flex">
+            <div class="column column--33">
+                <h2 class="colum__title">¿ Por qué tienes que venir a la Fontana ?</h2>
+                <p class="column__txt">
+
+                    Porque si reservas tu mesa para éste 2019 podrás disfrutar de unas increíbles ventajas y descuentos!
+
+                    Pide cita en el 📞 934958204!</p>
+            </div>
+            <div class="column column--33">
+                <h2 class="colum__title">Contactanos</h2>
+                <p class="column__txt"> Viña del Mar, Libertad 678 b </p>
+                <p class="column__txt"> Telefono: +56 9 34958204</p>
+                <p class="column__txt"> Consultas: RestoIta@gmail.com</p>
+            </div>
+
+
+            <div class="column column--33">
+                <h2 class="colum__title">Siguenos en las redes</h2>
+            
+                <p class="column__txt"> <a href="https://twitter.com/?lang=es" class="icon-twitter"></a> Siguenos en Twitter </p>
+                <p class="column__txt"> <a href="https://www.youtube.com/" class="icon-youtube"></a> Visita nuestro canal</p>
+                <p class="column__txt"> <a href="https://www.facebook.com/" class="icon-facebook"></a> Visita nuestra pagina</p>
+            </div>
+            <p class="copy">
+                ©Copyright 2001-2019
+                Copyright.es - Todos los
+                Derechos Reservados - Legal
+            </p>
+        </div>
+
+
+    </footer>
+    <script src="js/menu.js"></script>
+    <script src="popup.js"></script>
+
+</body>
+
+
+</html>
